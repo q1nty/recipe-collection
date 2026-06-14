@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Коллекция рецептов</title>
+</head>
+<body>
+
+<h1>Коллекция рецептов</h1>
+
+<form method="GET">
+    <input type="text" name="search" placeholder="Поиск">
+    <button type="submit">Найти</button>
+</form>
+
+<a href="/add">Добавить рецепт</a>
+
+<hr>
+
+{% for recipe in recipes %}
+<div>
+    <h3>{{ recipe.title }}</h3>
+    <p>{{ recipe.category }}</p>
+
+    <a href="/recipe/{{ recipe.id }}">Открыть</a>
+    <a href="/delete/{{ recipe.id }}">Удалить</a>
+</div>
+<hr>
+{% endfor %}
+
+</body>
+</html>
