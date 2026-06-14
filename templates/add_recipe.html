@@ -1,62 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Добавить рецепт</title>
+    <title>Add Recipe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
 
-<h1>Добавить рецепт</h1>
+<body class="bg-light">
 
-<form method="POST">
+<div class="container mt-4">
 
-    <input
-        type="text"
-        name="title"
-        placeholder="Название"
-        required
-    >
+    <h2>Add New Recipe</h2>
 
-    <br><br>
+    <form method="POST">
 
-    <input
-        type="text"
-        name="category"
-        placeholder="Категория"
-        required
-    >
+        <input class="form-control mb-2" name="title" placeholder="Recipe title">
+        <input class="form-control mb-2" name="category" placeholder="Category">
+        <textarea class="form-control mb-2" name="ingredients" placeholder="Ingredients"></textarea>
+        <textarea class="form-control mb-2" name="instructions" placeholder="Instructions"></textarea>
+        <input class="form-control mb-2" name="cooking_time" placeholder="Cooking time">
 
-    <br><br>
+        <button class="btn btn-success">Save</button>
 
-    <textarea
-        name="ingredients"
-        placeholder="Ингредиенты"
-        required
-    ></textarea>
+    </form>
 
-    <br><br>
-
-    <textarea
-        name="instructions"
-        placeholder="Способ приготовления"
-        required
-    ></textarea>
-
-    <br><br>
-
-    <input
-        type="text"
-        name="cooking_time"
-        placeholder="Время приготовления"
-        required
-    >
-
-    <br><br>
-
-    <button type="submit">
-        Сохранить
-    </button>
-
-</form>
+</div>
 
 </body>
 </html>
